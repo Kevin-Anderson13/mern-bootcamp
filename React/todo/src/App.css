@@ -1,0 +1,11 @@
+.cross-out {
+  text-decoration: line-through;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.make-grey {
+  color: gray;
+}
