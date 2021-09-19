@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+ const mongoose = require('mongoose');
 const dbName = "jokesDB"; // name in quotes can be anything
 
 mongoose.connect("mongodb://localhost/jokesDB", {
