@@ -25,11 +25,11 @@ const ShowAll = (props) => {
 
 
     return(
-        <div>
+        <div className="allProducts">
             {
                 products?
                     products.map((product, index) => (
-                        <div key={index}>
+                        <div className="eachProduct" key={index}>
                             <Link to={`/product/${product._id}`}><h2>{product.title}</h2></Link>
                             <Link to={`/product/${product._id}/edit`}><span>Edit</span></Link>
                             <Delete deleteRefresh={deleteRefresh} id={product._id}/>

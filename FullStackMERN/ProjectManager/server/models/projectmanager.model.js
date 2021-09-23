@@ -1,19 +1,26 @@
 const mongoose = require("mongoose");
 
+const uniqueValidator = require('mongoose-unique-validator');
+
 const ProductSchema = new mongoose.Schema({
-    title:{
+    title: {
         type: String,
-        required: [true]
+        required: [true, "A Product Title is required"],
+        minlength: [3, "A Product Title must be at least 3 characters"],
+        unique: true
     },
 
-    price:{
+    price: {
         type: Number
     },
 
-    description:{
+    description: {
         type: String
     }
-}, {timestamps: true})
+}, { timestamps: true })
+
+ProductSchema.plugin(uniqueValidator);
+
 
 const Product = mongoose.model("Product", ProductSchema);
 

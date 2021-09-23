@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 const Form = (props) => {
 
     const { submitHandler, product, setProduct } = props;
+    const {errors, setErrors} = useState({});
 
 
     const inputHandler = (e) => {
@@ -12,9 +13,9 @@ const Form = (props) => {
     }
 
     return (
-        <div>
+        <div className="form">
             <form onSubmit={submitHandler}>
-                <label>Product</label>
+                <label>Enter a Product</label>
                 <input onChange={inputHandler} name="title" value={product.title} name="title" type="text" />
                 <br />
 

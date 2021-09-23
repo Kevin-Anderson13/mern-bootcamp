@@ -20,7 +20,7 @@ const ShowOne = (props) => {
 
 
     return (
-        <div>
+        <div className="singleProduct">
             <h1>{singleProduct.title}</h1>
             <p>{singleProduct.description}</p>
             <h3>${singleProduct.price}.00</h3>

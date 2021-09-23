@@ -3,8 +3,9 @@ import axios from 'axios';
 import Form from "./Form";
 
 const Create = (props) => {
-
     const { products, setProducts } = props;
+
+    const {errors, setErrors} = useState({});
 
     const [newProduct, setNewProduct] = useState({
         title: "",
@@ -27,7 +28,10 @@ const Create = (props) => {
                     description: ""
                 })
             })
-            .catch((err) => console.log(err))
+            .catch((err) => {
+                console.log(err.response.data.errors);
+            })
+
     }
 
 
